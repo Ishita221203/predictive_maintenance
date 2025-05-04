@@ -257,7 +257,7 @@ FAILURES_URL = "https://drive.google.com/uc?id=1sIZmHQDmCqjjJ6yuNTgm3FWrLToDEOwq
         
 #         try:
 #             # Load historical data for scenarios
-#             historical_data = self.load_data('PdM_telemetry.csv', 'PdM_failures.csv')
+#             historical_data = self.load_data('PdM_telemetry.csv', FAILURES_URL)
             
 #             # Create example scenarios
 #             scenarios = {

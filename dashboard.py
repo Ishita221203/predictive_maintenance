@@ -58,7 +58,7 @@ FAILURES_URL = "https://drive.google.com/uc?id=1sIZmHQDmCqjjJ6yuNTgm3FWrLToDEOwq
 #     if st.button("Train Model"):
 #         with st.spinner("Training model..."):
 #             model = PredictiveMaintenanceModel()
-#             data = model.load_data(TELEMETRY_URL, 'PdM_failures.csv')
+#             data = model.load_data(TELEMETRY_URL, FAILURES_URL)
 #             X_train, X_test, y_train, y_test = model.preprocess_data(data)
 #             model.train(X_train, y_train)
             
@@ -573,7 +573,7 @@ if model is None:
     if st.button("Train Model"):
         with st.spinner("Training model..."):
             model = PredictiveMaintenanceModel()
-            data = model.load_data(TELEMETRY_URL, 'PdM_failures.csv')
+            data = model.load_data(TELEMETRY_URL, FAILURES_URL)
             X_train, X_test, y_train, y_test = model.preprocess_data(data)
             model.train(X_train, y_train)
             

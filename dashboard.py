@@ -11,8 +11,8 @@
 # import datetime
 # import io
 
-TELEMETRY_URL = "https://drive.google.com/uc?id=FILE_ID"
-FAILURES_URL = "https://drive.google.com/uc?id=OTHER_FILE_ID"
+TELEMETRY_URL = "https://drive.google.com/uc?id=1duTtnefd7JafuQGiyCQ22Z-c4HM7gqmZ"
+FAILURES_URL = "https://drive.google.com/uc?id=1sIZmHQDmCqjjJ6yuNTgm3FWrLToDEOwq"
 
 
 # # Must be the first Streamlit command

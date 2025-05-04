@@ -11,6 +11,10 @@
 # import datetime
 # import io
 
+TELEMETRY_URL = "https://drive.google.com/uc?id=FILE_ID"
+FAILURES_URL = "https://drive.google.com/uc?id=OTHER_FILE_ID"
+
+
 # # Must be the first Streamlit command
 # st.set_page_config(
 #     page_title="Machine Health Monitoring Dashboard",
@@ -32,7 +36,7 @@
 # @st.cache_data
 # def load_historical_data(_model):  # Added underscore to parameter
 #     try:
-#         return pd.read_csv('PdM_telemetry.csv')
+#         return pd.read_csv(TELEMETRY_URL)
 #     except Exception as e:
 #         st.error(f"Error loading telemetry data: {str(e)}")
 #         return None
@@ -54,7 +58,7 @@
 #     if st.button("Train Model"):
 #         with st.spinner("Training model..."):
 #             model = PredictiveMaintenanceModel()
-#             data = model.load_data('PdM_telemetry.csv', 'PdM_failures.csv')
+#             data = model.load_data(TELEMETRY_URL, 'PdM_failures.csv')
 #             X_train, X_test, y_train, y_test = model.preprocess_data(data)
 #             model.train(X_train, y_train)
             
@@ -324,7 +328,7 @@
 #     # Create multi-parameter line chart
 #     try:
 #         # Load historical data
-#         historical_data = pd.read_csv('PdM_telemetry.csv')
+#         historical_data = pd.read_csv(TELEMETRY_URL)
 #         historical_data['datetime'] = pd.to_datetime(historical_data['datetime'])
         
 #         # Create time series plot with multiple parameters
@@ -547,7 +551,7 @@ def load_model():
 @st.cache_data
 def load_historical_data(_model):
     try:
-        return pd.read_csv('PdM_telemetry.csv')
+        return pd.read_csv(TELEMETRY_URL)
     except Exception as e:
         st.error(f"Error loading telemetry data: {str(e)}")
         return None
@@ -569,7 +573,7 @@ if model is None:
     if st.button("Train Model"):
         with st.spinner("Training model..."):
             model = PredictiveMaintenanceModel()
-            data = model.load_data('PdM_telemetry.csv', 'PdM_failures.csv')
+            data = model.load_data(TELEMETRY_URL, 'PdM_failures.csv')
             X_train, X_test, y_train, y_test = model.preprocess_data(data)
             model.train(X_train, y_train)
             
@@ -837,7 +841,7 @@ with viz_tab1:
     # Create multi-parameter line chart
     try:
         # Load historical data
-        historical_data = pd.read_csv('PdM_telemetry.csv')
+        historical_data = pd.read_csv(TELEMETRY_URL)
         historical_data['datetime'] = pd.to_datetime(historical_data['datetime'])
         
         # Create time series plot with multiple parameters

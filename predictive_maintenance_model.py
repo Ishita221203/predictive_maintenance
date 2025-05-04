@@ -13,6 +13,13 @@
 # import seaborn as sns
 # import matplotlib.pyplot as plt
 
+TELEMETRY_URL = "https://drive.google.com/uc?id=FILE_ID"
+FAILURES_URL = "https://drive.google.com/uc?id=OTHER_FILE_ID"
+
+telemetry = pd.read_csv(TELEMETRY_URL)
+failures = pd.read_csv(FAILURES_URL)
+
+
 # class PredictiveMaintenanceModel:
 #     def __init__(self):
 #         self.model = RandomForestClassifier(n_estimators=100, random_state=42)

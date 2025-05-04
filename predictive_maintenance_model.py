@@ -16,9 +16,6 @@
 TELEMETRY_URL = "https://drive.google.com/uc?id=FILE_ID"
 FAILURES_URL = "https://drive.google.com/uc?id=OTHER_FILE_ID"
 
-telemetry = pd.read_csv(TELEMETRY_URL)
-failures = pd.read_csv(FAILURES_URL)
-
 
 # class PredictiveMaintenanceModel:
 #     def __init__(self):
@@ -28,10 +25,10 @@ failures = pd.read_csv(FAILURES_URL)
 #         self.target = 'failure'
 #         self.thresholds = {}  # Store normal operating ranges
         
-#     def load_data(self, telemetry_path, failures_path):
+#     def load_data(self, TELEMETRY_URL, failures_path):
 #         # Load telemetry data
 #         print("Loading telemetry data...")
-#         telemetry = pd.read_csv(telemetry_path)
+#         telemetry = pd.read_csv(TELEMETRY_URL)
 #         print("Telemetry columns:", telemetry.columns.tolist())
         
 #         # Load failure data
@@ -409,10 +406,10 @@ class PredictiveMaintenanceModel:
         self.target = 'failure'
         self.thresholds = {}  # Store normal operating ranges
         
-    def load_data(self, telemetry_path, failures_path):
+    def load_data(self, TELEMETRY_URL, failures_path):
         # Load telemetry data
         print("Loading telemetry data...")
-        telemetry = pd.read_csv(telemetry_path)
+        telemetry = pd.read_csv(TELEMETRY_URL)
         print("Telemetry columns:", telemetry.columns.tolist())
         
         # Load failure data
